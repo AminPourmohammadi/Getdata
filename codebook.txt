@@ -1,0 +1,33 @@
+
+The variables in the output submit.txt file are: subject number, named 'subject' and activity label, named 'activity' and 79 statistics which have their respective names. Technical information about the features is included in the file features_info.txt in the unzipped folder.
+
+The variables used in the code, with respect to their appearance are:
+zip.file.name: This variable holds the name of the zipfile, namely 'zipfile.zip'. And it is used to check if the raw zip file already exists  in the working directory or not.
+
+activity.labels: This dataframe consists of codes used in the raw dataset for different activities.
+
+features: This dataframe shows holds the names of different columns of X_train data (X_train data does not have variable names, we get them from this dataframe)
+
+X-train: This dataframe holds the data from the raw file: X_train.txt which is the file holding training part of independent variables.
+
+y_train: This dataframe holds the data from the raw file: y_train.txt which is the file holding trainig part of dependent variable.
+
+subject_train: This dataframe holds the data from the raw file subject_train.txt which is the file holding information about the subject's code.
+
+train: This dataframe binds the above dataframes together in a new dataframe.
+
+X_test, y_test, subject_test, test: These are counterparts  of the above dataframes for the test partition.
+
+selected.features.index: This is a variable that shows which indices in features dataframe correspond to the features with the words 'mean' or 'std' in them.
+
+subject: This is a dataframe that merges subject_train and subject_test together.
+
+y: Merges y_train and y_test together.
+
+X: Merges X_train and X_test together.
+
+merged.data: A dataframe that merges subject and y and X together.
+
+merged.melted: A deformed dataframe from merged data that is used to produce the final data set. It has two id variables: subject and activity and a variable that shows which variable corresponds to which value from the value column.
+
+merged.mean: This is the final dataset to submit. It shows the average of every requested variable, for every activity and every subject.
